@@ -12,8 +12,8 @@ function ImgSelector() {
     return (                
         <div>   
             <br></br><br></br> 
-                <center>
-                <img class = "image-unselected" src = {clickedImage} width = "600" height = "400"></img> </center> <br></br><br></br>
+                {/* <center>
+                <img class = "image-unselected" src = {clickedImage} width = "600" height = "400"></img> </center> <br></br><br></br> */}
                 <center>
                 {urlList.map(urls => (
                     <img class = {urls === clickedImage ? "image-selected" : "image-unselected" } 

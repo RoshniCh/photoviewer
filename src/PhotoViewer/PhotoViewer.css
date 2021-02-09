@@ -13,8 +13,8 @@ body{
 .top-image
 {
     background-color:#151820;
-    display: flex;
-    align-items : center;
+    /* display: flex;
+    align-items : center; */
 }
 
 .images

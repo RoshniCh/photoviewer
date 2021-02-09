@@ -9,9 +9,9 @@ function App() {
       <div>
         <h1>React Photo Viewer</h1>
         <body>
-          {/* <div className = "top-image">
+          <div className = "top-image">
             <PhotoViewer src ="https://picsum.photos/id/237/600/400"/>
-          </div> */}
+          </div>
           <div className = "images">
                 <ImgSelector/>
           </div>

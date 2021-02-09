@@ -4,8 +4,10 @@ function PhotoViewer(props) {
       // declare a new function called 'PhotoViewer'
     
       return (                
-        <div>               
-            <img src = {props.src}></img>
+        <div>   
+            <center>            
+                <img src = {props.src}></img>
+            </center>
         </div>
     );
 }
