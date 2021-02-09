@@ -6,8 +6,8 @@ function ImgSelector() {
     const urlList = ImageUrls;
     const [clickedImage, setClickedImage] = useState(urlList[0]); 
     
-    // function incrementCount() {
-    //     setClickCount(e => setMessage(e.target.src)) }
+    function updateClickedImage(url) {
+        setClickedImage(url) }
 
     return (                
         <div>   
@@ -16,11 +16,56 @@ function ImgSelector() {
                 <img class = "image-unselected" src = {clickedImage} width = "600" height = "400"></img> </center> <br></br><br></br>
                 <center>
                 {urlList.map(urls => (
-                    <img class = "image-unselected" src = {urls} onClick={(e => setClickedImage(e.target.src)) }></img>
+                    <img class = {urls === clickedImage ? "image-selected" : "image-unselected" } 
+                    src = {urls} onClick={ () => updateClickedImage(urls) }></img>
                 ))}
                 </center>
         </div>
     );
 }
 
+
 export {ImgSelector};  
+
+
+// // ***** toggles the whole block white and blue
+// function ImgSelector() {  
+//     const urlList = ImageUrls;
+//     const [isActive, setActive] = useState(false); 
+    
+//     function toggleClass() {
+//         setActive(!isActive) }
+
+//     return (                
+//         <div>   
+//             <center>
+//                 {urlList.map(urls => (
+//                     <img className = {isActive && urls == ? 'image-selected' : 'image-unselected'} src = {urls} onClick={ () => toggleClass() }></img>
+//                 ))}
+//             </center>
+//         </div>
+//     );
+// }
+
+
+// ****** shows selected image on top and a block of images at the bottom
+// function ImgSelector() {  
+//     const urlList = ImageUrls;
+//     const [clickedImage, setClickedImage] = useState(urlList[0]); 
+    
+//     function updateClickedImage(url) {
+//         setClickedImage(url) }
+
+//     return (                
+//         <div>   
+//             <br></br><br></br> 
+//                 <center>
+//                 <img class = "image-unselected" src = {clickedImage} width = "600" height = "400"></img> </center> <br></br><br></br>
+//                 <center>
+//                 {urlList.map(urls => (
+//                     <img class = "image-unselected" src = {urls} onClick={ () => updateClickedImage(urls) }></img>
+//                 ))}
+//                 </center>
+//         </div>
+//     );
+// }
