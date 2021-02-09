@@ -2,12 +2,12 @@ import React from "react";  // import React (to provide access to JSX)
 import {useState} from "react"
 import { ImageUrls } from './getImageUrls.js';
 
-function ImgSelector() {  
+function ImgSelector(props) {  
     const urlList = ImageUrls;
-    const [clickedImage, setClickedImage] = useState(urlList[0]); 
+    // const [clickedImage, setClickedImage] = useState(urlList[0]); 
     
-    function updateClickedImage(url) {
-        setClickedImage(url) }
+    // function updateClickedImage(url) {
+    //     props.setClickedImage(url) }
 
     return (                
         <div>   
@@ -16,8 +16,8 @@ function ImgSelector() {
                 <img class = "image-unselected" src = {clickedImage} width = "600" height = "400"></img> </center> <br></br><br></br> */}
                 <center>
                 {urlList.map(urls => (
-                    <img class = {urls === clickedImage ? "image-selected" : "image-unselected" } 
-                    src = {urls} onClick={ () => updateClickedImage(urls) }></img>
+                    <img class = {urls === props.clickedImage ? "image-selected" : "image-unselected" } 
+                    src = {urls} onClick={ () => props.setClickedImage(urls) }></img>
                 ))}
                 </center>
         </div>

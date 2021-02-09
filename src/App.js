@@ -1,19 +1,22 @@
 import logo from './logo.svg';
+import {useState} from "react"
 import './App.css';
 import {PhotoViewer} from './PhotoViewer/PhotoViewer.js';
 import './PhotoViewer/PhotoViewer.css'
 import { ImgSelector } from './PhotoViewer/ImgSelector.js';
 
+
 function App() {
+  const [clickedImage, setClickedImage] = useState("https://picsum.photos/id/600/200/300"); 
   return (
       <div>
         <h1>React Photo Viewer</h1>
         <body>
           <div className = "top-image">
-            <PhotoViewer src ="https://picsum.photos/id/237/600/400"/>
+            <PhotoViewer src = {clickedImage}/>
           </div>
           <div className = "images">
-                <ImgSelector/>
+                <ImgSelector clickedImage = {clickedImage} setClickedImage = {setClickedImage}/>
           </div>
         </body>
       </div>

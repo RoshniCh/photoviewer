@@ -6,7 +6,8 @@ function PhotoViewer(props) {
       return (                
         <div>   
             <center>            
-                <img src = {props.src}></img>
+                <br></br> <br></br>
+                <img src = {props.src} width = "600" height = "400"></img>
             </center>
         </div>
     );
